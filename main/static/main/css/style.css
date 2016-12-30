@@ -224,7 +224,8 @@ text-align: center;
     margin: 0 auto;
 }
 .block-form {
-width: 415px;
+width: auto;
+max-width: 415px;
 }
 label {
 display: block;
