@@ -24,7 +24,10 @@ SECRET_KEY = '1!o-i%!&h4l4$-8)&6-v4-m-@xk-=#ixtumq!17a2prjgfoya3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'http://vanabo.pythonanywhere.com/',
+    'vanabo.pythonanywhere.com'
+]
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
