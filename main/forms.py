@@ -13,7 +13,7 @@ tv = s + td
 class Order(forms.Form):
     current_point = forms.CharField(label='Укажите адрес*', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Введите адрес Вашего местоположения'}), max_length=100, required = True)
     current_date = forms.DateField(label='Дата*', widget=SelectDateWidget(attrs={'class':'form-control-date'}), initial=d, required = True)
-    current_time = forms.TimeField(label='Время*', widget=forms.TimeInput(attrs={'class':'form-control-time'}), initial=tv, required = True)
+    current_time = forms.TimeField(label='Время*', widget=forms.TimeInput(attrs={'class':'form-control-time', 'size':'8'}), initial=tv, required = True)
     phone3 = forms.CharField(label='Телефон*', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Введите номер телефона'}), required=True)
 
 class CallBack(forms.Form):
