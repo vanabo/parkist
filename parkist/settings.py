@@ -37,13 +37,22 @@ TIME_INPUT_FORMATS = [
 
 GOOGLE_MAPS_API_KEY = 'AIzaSyDLqdgdRPeKm-bfgXtaOQqQFsCH1FXHVPk'
 
-EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
-EMAIL_HOST = 'smtp.yandex.ru'
+ALLOWED_HOSTS = [
+    'http://vanabo.pythonanywhere.com/',
+    'vanabo.pythonanywhere.com',
+    'parkist.ru',
+    'http://parkist.ru',
+    'https://parkist.ru',
+    'localhost',
+    '127.0.0.1'
+]
+
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'info@parkist.ru'
-EMAIL_HOST_PASSWORD = 'uto9in'
-EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = 'info@parkist.ru'
+EMAIL_HOST_USER = 'nadezhda.valyaeva@gmail.com'
+EMAIL_HOST_PASSWORD = 'Uto9inYO!'
+EMAIL_USE_TLS = True
+
 
 # Application definition
 

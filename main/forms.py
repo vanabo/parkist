@@ -69,14 +69,7 @@ class Order(floppyforms.Form):
         js = (
             'floppyforms/openlayers/OpenLayers.js',
             'floppyforms/js/MapWidget.js',
-
-            # Needs safe() because the ampersand (&):
-            safe('http://maps.google.com/maps/api/js?'
-                 'v=3&key=AIzaSyDLqdgdRPeKm-bfgXtaOQqQFsCH1FXHVPk'),
         )
-        css = {
-            'all': ('https://openlayers.org/en/v3.20.1/css/ol.css')
-        }
 
 class CallBack2(forms.Form):
     name = forms.CharField(label='Ваше Имя', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ваше имя'}), max_length=100, required=False)

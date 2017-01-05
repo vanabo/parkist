@@ -249,6 +249,8 @@ display: block;
     margin-left:30px;
     text-align:center;
     min-width: 50px;
+	width: auto;
+	min-width: 30px;
 }
 
 ul.errorlist {
