@@ -25,15 +25,25 @@ SECRET_KEY = '1!o-i%!&h4l4$-8)&6-v4-m-@xk-=#ixtumq!17a2prjgfoya3'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'http://vanabo.pythonanywhere.com/',
-    'vanabo.pythonanywhere.com'
+    'vanabo.pythonanywhere.com',
+    'parkist.ru',
+    '127.0.0.1',
+    'localhost'
 ]
 
-EMAIL_HOST = 'smtp.gmail.com'
+TIME_INPUT_FORMATS = [
+    '%H:%M'
+]
+
+GOOGLE_MAPS_API_KEY = 'AIzaSyDLqdgdRPeKm-bfgXtaOQqQFsCH1FXHVPk'
+
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'nadezhda.valyaeva@gmail.com'
-EMAIL_HOST_PASSWORD = 'Uto9inYO#'
-EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'info@parkist.ru'
+EMAIL_HOST_PASSWORD = 'uto9in'
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = 'info@parkist.ru'
 
 # Application definition
 
@@ -44,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'floppyforms',
+    'django.contrib.gis',
     'main'
 ]
 

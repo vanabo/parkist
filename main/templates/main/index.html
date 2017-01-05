@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Parkist - Живая парковка в Москве</title>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{% static 'main/css/img/favicon.ico' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'main/css/img/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
 </head>
 
 <body>
@@ -64,20 +65,45 @@
             </div>
 <form action="/#order" role="form" id="contactForm" method="POST">
     {% csrf_token %}
+    {% if success %}
+    <div class="bg-success">
+    {{ success }}
+    </div>
+    {% endif %}
+    {{ form.non_field_errors }}
     <div class="form-group">
-    {{ form.current_point.errors }}
     <label for="form.current_point.id_for_label">Укажите адрес*</label>
+    {% if form.current_point.errors %}
+        <div class="bg-danger">
+    {{ form.current_point.errors }}
+        </div>
+        {% endif %}
     {{ form.current_point }}
   </div>
   <div class="form-group">
-    {{ form.current_date.errors }}
     <label for="form.current_date.id_for_label">Дата и время*</label>
+
+      {% if form.current_date.errors %}
+      <div class="bg-danger">
+    {{ form.current_date.errors }}
+     </div>
+      {% endif %}
+      {% if form.current_time.errors %}
+      <div class="bg-danger">
+    {{ form.current_time.errors }}
+     </div>
+      {% endif %}
+
     {{ form.current_date }}
     {{ form.current_time }}
   </div>
     <div class="form-group">
-    {{ form.phone3.errors }}
     <label for="form.phone3.id_for_label">Телефон*</label>
+    {% if form.phone3.errors %}
+        <div class="bg-danger">
+    {{ form.phone3.errors }}
+        </div>
+        {% endif %}
     {{ form.phone3 }}
   </div>
     <div class="form-group block-button block-center"><input type="submit" name="submit3" class="button-orange" value="Вызвать Паркиста" /></div>
@@ -252,22 +278,7 @@
             Позвоните по телефону<br><span>+7 (495) 506-76-18</span><br>или заполните форму ниже и&nbsp;мы&nbsp;перезвоним Вам в&nbsp;течение 5&nbsp;минут!
             
             </div>
-
-<form action="/#callback" role="form" id="contactForm2" method="POST">
-    {% csrf_token %}
-    {{ form1.non_field_errors }}
-    <div class="form-group">
-    {{ form1.name2.errors }}
-    <label for="form1.name2.id_for_label">Ваше имя</label>
-    {{ form1.name2 }}
-    </div>
-    <div class="form-group">
-    {{ form1.phone2.errors }}
-    <label for="form1.phone2.id_for_label">Телефон*</label>
-    {{ form1.phone2 }}
-    </div>
-    <div class="form-group block-button block-center"><input type="submit" name="submit2" class="button-orange" value="Заказать звонок" /></div>
-</form>
+            {% include "main/form_snippet.html" with form=form2 method='POST' action="/#callback" %}
         </div>
     </div>
 </div>
@@ -316,27 +327,14 @@
         <h3 id="myModalLabel">Обратный звонок</h3>
       </div>
       <div class="modal-body">
-<form action="/#home" class="form-horizontal col-sm-12" role="form" id="contactForm3" method="POST">
-    {% csrf_token %}
-    {{ form2.non_field_errors }}
-    <div class="form-group">
-    {{ form2.name.errors }}
-    <label for="form2.name.id_for_label">Ваше имя</label>
-    {{ form2.name }}
-    </div>
-    <div class="form-group">
-    {{ form2.phone.errors }}
-    <label for="form2.phone.id_for_label">Телефон*</label>
-    {{ form2.phone }}
-    </div>
-    <div class="form-group block-button block-center"><input type="submit" name="submit2" class="button-orange" value="Заказать звонок" /></div>
-</form>
+        {% include "main/form_snippet.html" with form=form2 method='POST' action="/#home" %}
       </div>
       <div class="modal-footer">
       </div>
     </div>
   </div>
 </div>
+
 
 <script src="{% static 'main/js/bootstrap.js' %}"></script>
 

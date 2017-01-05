@@ -224,7 +224,8 @@ text-align: center;
     margin: 0 auto;
 }
 .block-form {
-width: 415px;
+width: auto;
+max-width: 415px;
 }
 label {
 display: block;
@@ -240,10 +241,30 @@ display: block;
     border: 1px solid #333;
     color: #333;
 }
+.form-control-date {
+    margin-right: 5px;
+}
+
 .form-control-time {
     margin-left:30px;
     text-align:center;
+    min-width: 50px;
 }
+
+ul.errorlist {
+    list-style-type: none;
+}
+
+ul.errorlist li {
+    padding: 10px;
+}
+.bg-success {
+    padding: 10px;
+    margin-botom: 10px;
+    margin-top:10px;
+}
+
+
 .pre-text {
     text-align: center;
     padding-top:30px;
