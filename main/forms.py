@@ -33,10 +33,10 @@ class Order(ModelForm):
         }
     class Media:
         css = {
-            'all': ('main/css/geoposition.css',),
+            'all': ('geoposition/css/geoposition.css',),
         }
         js = (
-            'main/js/geoposition.js',
+            'geoposition/js/geoposition.js',
         )
 
     #current_date = forms.DateField(label='Дата*', widget=SelectDateWidget(attrs={'class': 'form-control-date'}),
