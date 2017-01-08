@@ -35,23 +35,15 @@ TIME_INPUT_FORMATS = [
     '%H:%M'
 ]
 
-GOOGLE_MAPS_API_KEY = 'AIzaSyDLqdgdRPeKm-bfgXtaOQqQFsCH1FXHVPk'
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyDLqdgdRPeKm-bfgXtaOQqQFsCH1FXHVPk'
 
-ALLOWED_HOSTS = [
-    'http://vanabo.pythonanywhere.com/',
-    'vanabo.pythonanywhere.com',
-    'parkist.ru',
-    'http://parkist.ru',
-    'https://parkist.ru',
-    'localhost',
-    '127.0.0.1'
-]
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'nadezhda.valyaeva@gmail.com'
-EMAIL_HOST_PASSWORD = 'Uto9inYO!'
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = 'info@parkist.ru'
+EMAIL_HOST_PASSWORD = 'uto9in'
 EMAIL_USE_TLS = True
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 # Application definition
@@ -63,8 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'floppyforms',
-    'django.contrib.gis',
+    'geoposition',
     'main'
 ]
 
@@ -148,3 +139,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+GEOPOSITION_MAP_OPTIONS = {
+    'minZoom': 12,
+    'maxZoom': 18,
+    'center': {'lat': 55.75222, 'lng': 37.61556},
+}
+
+GEOPOSITION_MARKER_OPTIONS = {
+    'cursor': 'move',
+    'position': {'lat': 55.75222, 'lng': 37.61556},
+}
+
+GEOPOSITION_MAP_WIDGET_HEIGHT = 300

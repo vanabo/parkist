@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.http import HttpResponse
 from django.conf import settings
-from django.template import loader
-import smtplib
+
 
 from .forms import Order
 from .forms import CallBack2
@@ -12,14 +10,13 @@ def index(request):
     form = Order(request.POST or None)
     success = ''
     if form.is_valid():
-
         form_current_point = form.cleaned_data.get('current_point')
         form_current_date = form.cleaned_data.get('current_date')
         form_current_time = form.cleaned_data.get('current_time')
         form_phone3 = form.cleaned_data.get('phone3')
         subject = 'Parkist Заказ'
         from_email = settings.EMAIL_HOST_USER
-        to_email = ['nv@alltargets.ru', 'vanabo@mail.ru']
+        to_email = ['nv@alltargets.ru', 'igamer@mail.ru', '50']
         contact_message = '{0} {1} {2} {3}'.format(form_current_point, form_current_date, form_current_time, form_phone3)
 
         send_mail(

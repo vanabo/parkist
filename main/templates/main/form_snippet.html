@@ -1,8 +1,8 @@
 <form action={% if action %}{{ action }}{% endif %}  role="form"  method={% if method %}{{ method }}{% else %}POST{% endif %}>
     {% csrf_token %}
-    {% if success %}
+    {% if success2 %}
     <div class="bg-success">
-    {{ success }}
+    {{ success2 }}
     </div>
     {% endif %}
     {{ form2.non_field_errors }}

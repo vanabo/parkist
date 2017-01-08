@@ -224,8 +224,7 @@ text-align: center;
     margin: 0 auto;
 }
 .block-form {
-width: auto;
-max-width: 415px;
+
 }
 label {
 display: block;
@@ -262,10 +261,8 @@ ul.errorlist li {
 }
 .bg-success {
     padding: 10px;
-    margin-botom: 10px;
-    margin-top:10px;
+    margin-bottom: 10px;
 }
-
 
 .pre-text {
     text-align: center;
