@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
-
+from smsaero import SmsAero
 
 from .forms import Order
 from .forms import CallBack2
+
+api = SmsAero('nadezhda.valyaeva@gmail.com', 'uto9inuto9in', url_gate=u'http://gate.smsaero.ru/', signature=u'Parkist.ru', digital=1, type_send=4)
 
 def index(request):
     form = Order(request.POST or None)
@@ -15,8 +17,9 @@ def index(request):
         form_current_time = form.cleaned_data.get('current_time')
         form_phone3 = form.cleaned_data.get('phone3')
         subject = 'Parkist Заказ'
+        to_phone = '{0}'.format(form_phone3)
         from_email = settings.EMAIL_HOST_USER
-        to_email = ['nv@alltargets.ru', 'igamer@mail.ru', '50']
+        to_email = ['nv@alltargets.ru', 'igamer@mail.ru', '5067618@mail.ru']
         contact_message = '{0} {1} {2} {3}'.format(form_current_point, form_current_date, form_current_time, form_phone3)
 
         send_mail(
@@ -25,6 +28,16 @@ def index(request):
             from_email,
             to_email,
             fail_silently=True,
+        )
+
+        api.send(
+            to_phone,
+            'Спасибо за Ваш Заказ. Ожидайте Паркиста.'
+        )
+
+        api.sendtogroup(
+            'main_group',
+            contact_message
         )
 
         success = 'Мы получили Ваш заказ. Ждите звонка!'
@@ -46,6 +59,12 @@ def index(request):
             to_email,
             fail_silently=True,
         )
+
+        api.sendtogroup(
+            'main_group',
+            contact_message3
+        )
+        
         success2 = 'Спасибо за заявку! Ждите звонка!'
 
 
