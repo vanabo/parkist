@@ -2,97 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbcc0947-9993-42bc-9883-7aee6528ac68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/static/main/css/geoposition.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/static/main/js/geoposition.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/gis/img/move_vertex_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/gis/img/move_vertex_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/js/MapWidget.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/OpenLayers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/google.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/ie6-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/add_point_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/add_point_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/close.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/drag-rectangle-off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/drag-rectangle-on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_line_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_line_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_point_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_point_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_polygon_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/draw_polygon_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/editing_tool_bar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/move_feature_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/move_feature_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/navigation_history.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/overview_replacement.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/pan-panel-NOALPHA.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/pan-panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/pan_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/pan_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/panning-hand-off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/panning-hand-on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/remove_point_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/remove_point_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/ruler.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/save_features_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/save_features_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/view_next_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/view_next_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/view_previous_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/view_previous_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/zoom-panel-NOALPHA.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/img/zoom-panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/static/floppyforms/openlayers/theme/default/style.mobile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/_render_as.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/attrs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/checkbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/checkbox_select.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/clearable_input.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/color.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/date.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/datetime.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/dummy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/email.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/errors.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/gis/google.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/gis/openlayers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/gis/osm.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/hidden.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/input.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/ipaddress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/layouts/default.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/layouts/p.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/layouts/table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/layouts/ul.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/number.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/phonenumber.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/radio.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/range.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/rows/default.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/rows/li.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/rows/p.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/rows/tr.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/select.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/select_date.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/slug.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/text.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/textarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/time.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/floppyforms/templates/floppyforms/url.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/views_old.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/forms.py" afterPath="$PROJECT_DIR$/main/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/models.py" afterPath="$PROJECT_DIR$/main/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/static/main/css/style.css" afterPath="$PROJECT_DIR$/main/static/main/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/form_snippet.html" afterPath="$PROJECT_DIR$/main/templates/main/form_snippet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/index.html" afterPath="$PROJECT_DIR$/main/templates/main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parkist/settings.py" afterPath="$PROJECT_DIR$/parkist/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkist/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1909">
-              <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="311">
+              <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -152,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -238,7 +148,6 @@
         <option value="$PROJECT_DIR$/main/static/main/css/geoposition.js" />
         <option value="$PROJECT_DIR$/main/templates/main/form_snippet.html" />
         <option value="$PROJECT_DIR$/main/models.py" />
-        <option value="$PROJECT_DIR$/parkist/settings.py" />
         <option value="$PROJECT_DIR$/main/static/main/js/geoposition.js" />
         <option value="$PROJECT_DIR$/main/static/main/css/style.css" />
         <option value="$PROJECT_DIR$/main/static/main/css/geoposition.css" />
@@ -246,6 +155,7 @@
         <option value="$PROJECT_DIR$/main/templates/main/index.html" />
         <option value="$PROJECT_DIR$/main/static/main/js/datepicker.js" />
         <option value="$PROJECT_DIR$/main/forms.py" />
+        <option value="$PROJECT_DIR$/parkist/settings.py" />
       </list>
     </option>
   </component>
@@ -890,14 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parkist/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1909">
-          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -941,6 +843,14 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parkist/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
