@@ -22,13 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1!o-i%!&h4l4$-8)&6-v4-m-@xk-=#ixtumq!17a2prjgfoya3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'vanabo.pythonanywhere.com',
     'parkist.ru',
     '127.0.0.1',
-    'localhost'
+    'localhost',
+    '194.58.111.75',
 ]
 
 TIME_INPUT_FORMATS = [
