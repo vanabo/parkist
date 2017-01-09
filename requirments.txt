@@ -1,3 +1,0 @@
-Django 1.10.4
-pip 9.0.1
-django-smtp-ssl-1.0
