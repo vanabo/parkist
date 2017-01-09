@@ -64,7 +64,7 @@ def index(request):
             'main_group',
             contact_message3
         )
-        
+
         success2 = 'Спасибо за заявку! Ждите звонка!'
 
 
