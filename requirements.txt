@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Django==1.10.4
 django-geoposition==0.3.0
 requests==2.12.4
+=======
+Django==1.10.4
+django-geoposition==0.3.0
+requests==2.12.4
+>>>>>>> 30320a48570f664fa5cbecc38d7fd6f033c7227d
