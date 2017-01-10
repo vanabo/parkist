@@ -5,7 +5,7 @@ import time
 import requests
 import hashlib
 import json
-from urllib.parse import urljoin
+#from urllib.parse import urljoin
 from datetime import datetime
 
 
@@ -21,7 +21,7 @@ class SmsAeroHTTPError(SmsAeroError):
 
 class SmsAero(object):
     URL_GATE = 'http://gate.smsaero.ru/'
-    SIGNATURE = 'NEWS'
+    SIGNATURE = 'PARKIST'
     DIGITAL = 0
     TYPE_SEND = 2
 
@@ -44,7 +44,7 @@ class SmsAero(object):
             'password': self.passwd,
             'answer': 'json',
         })
-        url = urljoin(self.url_gate, selector)
+        #url = urljoin(self.url_gate, selector)
 
         try:
             response = self.session.post(url, data=data)
