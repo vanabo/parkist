@@ -28,6 +28,7 @@ ALLOWED_HOSTS = [
     'desolate-bayou-65687.herokuapp.com',
     'vanabo.pythonanywhere.com',
     'parkist.ru',
+    'www.parkist.ru',
     '127.0.0.1',
     'localhost',
     '194.58.111.75',
