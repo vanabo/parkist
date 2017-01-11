@@ -7,3 +7,4 @@ httpretty==0.8.14
 requests==2.12.4
 South==1.0.2
 urllib3==1.19.1
+whitenoise==3.2.3
