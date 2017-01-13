@@ -58,12 +58,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'input_mask',
     'geoposition',
     'smsaero',
     'main'
 ]
 
 SECURE_SSL_REDIRECT = True
+
+PREPEND_WWW = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -166,4 +169,4 @@ GEOPOSITION_MARKER_OPTIONS = {
     'position': {'lat': 55.75222, 'lng': 37.61556},
 }
 
-GEOPOSITION_MAP_WIDGET_HEIGHT = 300
+GEOPOSITION_MAP_WIDGET_HEIGHT = 250

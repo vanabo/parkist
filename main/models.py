@@ -18,9 +18,10 @@ dd = d.day
 mm = d.month
 
 class Order(models.Model):
-    current_point = GeopositionField(blank=True)
-    current_date = models.DateField(blank=True, default=d)
-    current_time = models.TimeField(blank=True, default=tv)
-    phone3 = models.CharField(blank=True, max_length = 11)
+    current_point = GeopositionField(blank=False)
+    current_date = models.DateField(blank=False)
+    current_time = models.TimeField(blank=False)
+    phone3 = models.CharField(max_length=11, blank=False)
+
 
 

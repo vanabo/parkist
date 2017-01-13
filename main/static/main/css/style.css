@@ -7,7 +7,6 @@ body {
   padding-bottom: 20px;
   font-family: 'Roboto Condensed', arial;
   font-size: 1rem;
-
 }
 a {
 cursor: pointer;
@@ -23,8 +22,6 @@ cursor: pointer;
   left: 0;
   z-index: 0;
   background: #65afb8;
-  height:65px;
-
   /* non-critical appearance styles */
   list-style: none;
 }

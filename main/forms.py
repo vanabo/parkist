@@ -28,7 +28,7 @@ class Order(ModelForm):
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
             'current_date': SelectDateWidget(attrs={'class': 'form-control-date'}),
-            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'type': 'time', 'size': '10'}),
+            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '8'}),
             'phone3': forms.TextInput(attrs={'class': 'form-control', 'data-format': '+7 (ddd) ddd-dddd', 'type': 'tel', 'placeholder': 'Введите номер телефона'}),
         }
     class Media:
@@ -51,6 +51,13 @@ class Order(ModelForm):
         #super(Order, self).__init__(self, *args, **kwargs)
         #self.fields['current_date'].initial = d
 
+    def __init__(self, *args, **kwargs):
+        kwargs.update(initial={
+            'current_time': datetime.datetime.now()+datetime.timedelta(minutes=30),
+            'current_date': datetime.date.today()
+        })
+        super(Order, self).__init__(*args, **kwargs)
+
     def clean_current_time(self, *args, **kwargs):
         current_time = self.cleaned_data.get('current_time')
         if current_time < datetime.time(hour=8, minute=0, second=0, microsecond=0, tzinfo=None) or current_time > datetime.time(hour=20, minute=0, second=0, microsecond=0, tzinfo=None):
@@ -66,7 +73,6 @@ class Order(ModelForm):
         elif current_date.weekday() == 6:
             raise forms.ValidationError('Выберите, пожалуйста, будний день')
         return current_date
-
 
 
 class CallBack2(forms.Form):
