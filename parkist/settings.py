@@ -65,7 +65,7 @@ INSTALLED_APPS = [
 
 SECURE_SSL_REDIRECT = True
 
-PREPEND_WWW = False
+PREPEND_WWW = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
