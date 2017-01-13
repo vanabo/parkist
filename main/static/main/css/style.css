@@ -61,7 +61,7 @@ ul.navigation {
   top: -30px;
   bottom: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   /* non-critical apperance styles */
   background-size: 200%;
 }
