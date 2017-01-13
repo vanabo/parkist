@@ -213,8 +213,9 @@ padding: 10px 30px 10px 30px;
 border: 2px solid #da940d;
 border-radius:5px;
 background: #da940d;
+z-index: 2000;
 }
-a.button-orange:hover {
+a.button-orange:hover, .button-orange a:hover {
 color: #fff;
 }
 .heading {
