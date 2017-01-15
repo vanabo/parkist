@@ -3,6 +3,7 @@ from geoposition.fields import GeopositionField
 from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
+from materialdjango.widgets import PaperTextInput, PhoneTextInput
 
 from . models import Order
 
@@ -11,7 +12,7 @@ import datetime
 d = datetime.date.today()
 s = datetime.datetime.now()
 tv1 = s.time
-td = datetime.timedelta(minutes=30)
+td = datetime.timedelta(minutes=15)
 tv = s + td
 
 td2 = datetime.timedelta(days=7)
@@ -28,8 +29,9 @@ class Order(ModelForm):
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
             'current_date': SelectDateWidget(attrs={'class': 'form-control-date'}),
-            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '8'}),
-            'phone3': forms.TextInput(attrs={'class': 'form-control', 'data-format': '+7 (ddd) ddd-dddd', 'type': 'tel', 'placeholder': 'Введите номер телефона'}),
+            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '5'}),
+            #'phone3': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите номер телефона'}),
+            'phone3': PhoneTextInput,
         }
     class Media:
         css = {
@@ -53,10 +55,22 @@ class Order(ModelForm):
 
     def __init__(self, *args, **kwargs):
         kwargs.update(initial={
-            'current_time': datetime.datetime.now()+datetime.timedelta(minutes=30),
+            'current_time': datetime.datetime.now()+datetime.timedelta(minutes=15),
             'current_date': datetime.date.today()
         })
         super(Order, self).__init__(*args, **kwargs)
+
+
+    def clean_current_date(self, *args, **kwargs):
+        current_date = self.cleaned_data.get('current_date')
+        if current_date == datetime.date.today():
+            def clean_current_time(self, *args, **kwargs):
+                current_time = self.cleaned_data.get('current_time')
+                if current_time < datetime.datetime.now()+datetime.timedelta(minutes=15):
+                    raise forms.ValidationError('Введите, пожалуйста, время позднее')
+                return current_time
+            return current_date
+
 
     def clean_current_time(self, *args, **kwargs):
         current_time = self.cleaned_data.get('current_time')
@@ -64,17 +78,18 @@ class Order(ModelForm):
             raise forms.ValidationError('Введите, пожалуйста, требуемое время парковки в рабочие часы с 8:00 до 20:00')
         return current_time
 
-    def clean_current_date(self, *args, **kwargs):
-        current_date = self.cleaned_data.get('current_date')
-        if current_date < d:
-            raise forms.ValidationError('Введите, пожалуйста, дату сегодня или позднее')
-        elif current_date.weekday() == 5:
-            raise forms.ValidationError('Выберите, пожалуйста, будний день')
-        elif current_date.weekday() == 6:
-            raise forms.ValidationError('Выберите, пожалуйста, будний день')
-        return current_date
+    #def clean_current_date(self, *args, **kwargs):
+        #current_date = self.cleaned_data.get('current_date')
+        #if current_date < d:
+            #raise forms.ValidationError('Введите, пожалуйста, дату сегодня или позднее')
+        #elif current_date.weekday() == 5:
+            #raise forms.ValidationError('Выберите, пожалуйста, будний день')
+        #elif current_date.weekday() == 6:
+            #raise forms.ValidationError('Выберите, пожалуйста, будний день')
+        #return current_date
 
 
 class CallBack2(forms.Form):
-    name = forms.CharField(label='Ваше Имя', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ваше имя'}), max_length=100, required=False)
-    phone = forms.CharField(label='Телефон', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Введите номер телефона'}), max_length=11, required = True)
+    #name = forms.CharField(label='Ваше Имя', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ваше имя'}), max_length=100, required=False)
+    name = forms.CharField(label='Ваше Имя', widget=PaperTextInput, max_length=100, required=False)
+    phone = forms.CharField(label='Телефон', widget=PhoneTextInput, max_length=10, required = True)
