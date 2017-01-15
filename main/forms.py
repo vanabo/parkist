@@ -3,7 +3,8 @@ from geoposition.fields import GeopositionField
 from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
-from materialdjango.widgets import PaperTextInput, PhoneTextInput
+from materialdjango.widgets import PaperTextInputName, PhoneTextInput
+from bootstrap3_datetime.widgets import DateTimePicker
 
 from . models import Order
 
@@ -28,9 +29,11 @@ class Order(ModelForm):
         model = Order
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
-            'current_date': SelectDateWidget(attrs={'class': 'form-control-date'}),
-            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '5'}),
-            #'phone3': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите номер телефона'}),
+            'current_date': DateTimePicker(options={"format": "YYYY-MM-DD", "pickTime": False}, icon_attrs = {'class': 'glyphicon glyphicon-date'},
+                                           div_attrs = {'class': 'input-group date'}),
+            'current_time': DateTimePicker(options={"format": "HH:mm", "pickSeconds": False,
+                                                    "pickDate": False}, icon_attrs = {'class': 'glyphicon glyphicon-time'},
+                                           div_attrs = {'class': 'input-group time'}),
             'phone3': PhoneTextInput,
         }
     class Media:
@@ -91,5 +94,5 @@ class Order(ModelForm):
 
 class CallBack2(forms.Form):
     #name = forms.CharField(label='Ваше Имя', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ваше имя'}), max_length=100, required=False)
-    name = forms.CharField(label='Ваше Имя', widget=PaperTextInput, max_length=100, required=False)
+    name = forms.CharField(label='Ваше Имя', widget=PaperTextInputName, max_length=100, required=False)
     phone = forms.CharField(label='Телефон', widget=PhoneTextInput, max_length=10, required = True)

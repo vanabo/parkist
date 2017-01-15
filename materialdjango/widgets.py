@@ -38,7 +38,23 @@ class PaperTextInput(TextInput):
             </paper-input-container>"""
             return format_html(html, name, value)
 
+class PaperTextInputName(TextInput):
 
+    def render(self, name, value, attrs=None):
+        # Unlike inputs using paper-input-container directly,
+        # paper-input does not work out of the box with the native form
+        # element.
+        if value is None:
+            html = u"""<paper-input-container label='{0}'>
+            <input is="iron-input" name="{0}" placeholder="Введите Ваше имя" class="paper-input-input">
+            </paper-input-container>"""
+            return format_html(html, name,)
+        else:
+            html = u"""<paper-input-container label='{0}' attr-for-value="value">
+            <label>{0}</label>
+            <input is="iron-input" name="{0}" placeholder=" "  value="{1}">
+            </paper-input-container>"""
+            return format_html(html, name, value)
 
 class PaperPasswordInput(PasswordInput):
 

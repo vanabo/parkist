@@ -12,12 +12,20 @@
   <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
   <script src="{% static 'materialdjango/components/bower_components/webcomponentsjs/webcomponents.js' %}"></script>
+    <link rel="stylesheet"
+              href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
+        <link rel="stylesheet"
+              href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
+        </script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js"></script>
     {{ "polymer/polymer.html" |dep}}
     {{ "paper-button/paper-button.html" |dep}}
     {{"gold-phone-input/gold-phone-input.html" |dep}}
     {{ "paper-input/paper-input-container.html" |dep}}
     {{ "iron-input/iron-input.html" |dep}}
   <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
+
 </head>
 
 <body>
@@ -102,8 +110,10 @@
     {{ form.current_time.errors }}
      </div>
       {% endif %}
+      <div class="date-time">
     {{ form.current_date }}
     {{ form.current_time }}
+      </div>
   </div>
     <div class="form-group">
     <label for="form.phone3.id_for_label">Телефон*</label>

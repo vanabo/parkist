@@ -61,10 +61,11 @@ INSTALLED_APPS = [
     'geoposition',
     'materialdjango',
     'smsaero',
-    'main'
+    'main',
+    'bootstrap3_datetime'
 ]
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

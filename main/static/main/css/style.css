@@ -206,9 +206,9 @@ margin-bottom:30px;
 .button-orange {
 font-size: 1.4rem;
 color: #fff;
-width: 250px;
+width: auto;
 height:auto;
-padding: 10px 30px 10px 30px;
+padding: 10px 20px 10px 20px;
 border: 2px solid #da940d;
 border-radius:5px;
 background: #da940d;
@@ -256,6 +256,19 @@ display: block;
     text-align:center;
     min-width: 50px;
 	width: auto;
+}
+
+.date-time {
+    display: flex;
+    justify-content:space-between;
+}
+
+.input-group.date {
+    width: 66%;
+}
+
+.input-group.time {
+    width: 32%;
 }
 
 ul.errorlist {
@@ -487,18 +500,31 @@ border:none;
 
 @media (max-width: 768px) {
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 .phone {
-font-size: 1.125rem;
+font-size: 1.4rem;
 }
 .block-contact {
 text-align: right;
 padding-right: 20px;
 }
 .button-orange {
-font-size: 1.125rem;
-padding: 10px 20px 10px 20px;
+font-size: 1.4rem;
+padding: 10px 15px 10px 15px;
+}
+.date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.date {
+    width: 100%;
+}
+
+.input-group.time {
+    width: 100%;
+    margin-top:10px;
 }
 .block-features-text, .block-features, .block-features2 {
     padding-top: 20px;
