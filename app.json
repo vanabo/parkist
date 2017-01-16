@@ -1,0 +1,21 @@
+{
+  "name": "parkist",
+  "scripts": {
+  },
+  "env": {
+    "DISABLE_COLLECTSTATIC": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "pointdns",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
