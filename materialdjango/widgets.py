@@ -46,13 +46,13 @@ class PaperTextInputName(TextInput):
         # element.
         if value is None:
             html = u"""<paper-input-container label='{0}'>
-            <input is="iron-input" name="{0}" placeholder="Введите Ваше имя" class="paper-input-input">
+            <input is="iron-input" name="{0}" class="paper-input-input">
             </paper-input-container>"""
             return format_html(html, name,)
         else:
             html = u"""<paper-input-container label='{0}' attr-for-value="value">
             <label>{0}</label>
-            <input is="iron-input" name="{0}" placeholder=" "  value="{1}">
+            <input is="iron-input" name="{0}" value="{1}">
             </paper-input-container>"""
             return format_html(html, name, value)
 

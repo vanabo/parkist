@@ -152,7 +152,7 @@ text-align:right;
 padding-top:10px;
 }
 .phone {
-font-size: 1.4rem;
+font-size: 1.8rem;
 color: white;
 }
 .call-back {
@@ -169,7 +169,10 @@ height: 65px;
 z-index: 2;
 }
 .call-back a {
-font-size: 0.9rem;
+font-size: 1.1rem;
+color: #333;
+}
+.call-back a:hover {
 color: #333;
 }
 .block-slide {
@@ -286,6 +289,7 @@ ul.errorlist li {
 .pre-text {
     text-align: center;
     padding-top:30px;
+    padding-bottom: 30px;
 }
 .pre-text span {
     font-size: 1.4rem;
@@ -305,13 +309,12 @@ background: rgba(251, 251, 251, 0.7);
 margin-top:40px;
 }
 .block-table p{
-    font-size: 1rem;
-    text-align: left;
+    font-size: 1.6rem;
     padding-top:15px;
     padding-bottom:15px;
 }
 .block-table p span{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .block-pictures .block-img {
 text-align: center;
@@ -462,6 +465,10 @@ height: 450px;
 background: url("img/map.png") no-repeat center;
 background-size: cover;
 }
+
+.block-table, .block-table p {
+text-align: center;
+}
 .footer {
     display: flex;
     justify-content:space-between;
@@ -503,28 +510,15 @@ html {
     font-size: 16px;
 }
 .phone {
-font-size: 1.4rem;
+font-size: 1.6rem;
 }
 .block-contact {
 text-align: right;
 padding-right: 20px;
 }
 .button-orange {
-font-size: 1.4rem;
+font-size: 1.6rem;
 padding: 10px 15px 10px 15px;
-}
-.date-time {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group.date {
-    width: 100%;
-}
-
-.input-group.time {
-    width: 100%;
-    margin-top:10px;
 }
 .block-features-text, .block-features, .block-features2 {
     padding-top: 20px;
@@ -543,6 +537,21 @@ padding:10px;
 }
 }
 
+@media (max-width: 540px) {
+.date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.date {
+    width: 100%;
+}
+
+.input-group.time {
+    width: 100%;
+    margin-top:10px;
+}}
+
 .modal-body {
 border: none;
 }
@@ -552,4 +561,4 @@ width: 285px;
 .modal-footer {
     border: none;
     text-align:center;
-    }
+}
