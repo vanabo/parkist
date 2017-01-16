@@ -5,7 +5,12 @@
     display: none;
 }
 
-
+input.geoposition {
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid #333;
+    color: #333;
+}
 
 .geoposition-map2 {
     position: relative;
@@ -46,7 +51,10 @@
 
 .geoposition-search2 input {
     width: 100%;
-    border: none;
+    height: 34px;
+    border-radius: 0;
+    border: 1px solid #333;
+    color: #333;
     padding: 6px 12px;
 }
 
