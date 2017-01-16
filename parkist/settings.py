@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'materialdjango',
     'smsaero',
     'main',
-    'bootstrap3_datetime'
+    'bootstrap3_datetime',
 ]
 
 SECURE_SSL_REDIRECT = True
