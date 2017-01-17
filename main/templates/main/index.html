@@ -4,13 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Parkist - Живая парковка в Москве</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="shortcut icon" href="{% static 'main/css/img/favicon.ico' %}" type="image/x-icon">
-  <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
-  <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+    {{ "polymer/polymer.html" |dep}}
+    {{ "paper-button/paper-button.html" |dep}}
+    {{"gold-phone-input/gold-phone-input.html" |dep}}
+    {{ "paper-input/paper-input-container.html" |dep}}
+    {{ "iron-input/iron-input.html" |dep}}
+    {{ form.media }}
+    <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
 </head>
 
 <body>
@@ -65,7 +72,7 @@
                 <h2>Вызвать Паркиста</h2>
             </div>
 <form action="/#order" role="form" id="contactForm" method="POST">
-    {{ form.media }}
+
     {% csrf_token %}
     {% if success %}
     <div class="bg-success">
@@ -81,6 +88,7 @@
         </div>
         {% endif %}
     {{ form.current_point }}
+        <div class="help-map hidden-lg hidden-md hidden-sm">Масштабируйте и перемещайте карту двумя пальцами, перетащите флажок в место встречи</div>
   </div>
   <div class="form-group">
     <label for="form.current_date.id_for_label">Дата и время*</label>
@@ -94,8 +102,11 @@
     {{ form.current_time.errors }}
      </div>
       {% endif %}
-    {{ form.current_date }}
+
+      <div class="date-time">
     {{ form.current_time }}
+    {{ form.current_date }}
+      </div>
   </div>
     <div class="form-group">
     <label for="form.phone3.id_for_label">Телефон*</label>
@@ -107,7 +118,9 @@
     {{ form.phone3 }}
   </div>
     <div class="form-group block-button block-center"><input type="submit" name="submit3" class="button-orange" value="Вызвать Паркиста" /></div>
+
 </form> 
+
         </div>
     </div>
 </div>
@@ -334,7 +347,7 @@
     </div>
   </div>
 </div>
-<script src="{% static 'main/js/bootstrap.js' %}"></script>
+
 
 </body>
 </html>

@@ -3,6 +3,8 @@ from geoposition.fields import GeopositionField
 from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
+from bootstrap3_datetime.widgets import DateTimePicker
+from materialdjango.widgets import PhoneTextInput, PaperTextInput
 
 from . models import Order
 
@@ -27,9 +29,13 @@ class Order(ModelForm):
         model = Order
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
-            'current_date': SelectDateWidget(attrs={'class': 'form-control-date'}),
-            'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '8'}),
-            'phone3': forms.TextInput(attrs={'class': 'form-control', 'data-format': '+7 (ddd) ddd-dddd', 'type': 'tel', 'placeholder': 'Введите номер телефона'}),
+            'current_time': DateTimePicker(options={"format": "HH:mm", "pickSeconds": False,
+                                                    "pickDate": False},
+                                           icon_attrs={'class': 'glyphicon glyphicon-time'},
+                                           div_attrs={'class': 'input-group time'}),
+            'current_date': DateTimePicker(options={"format": "DD-MM-YYYY", "pickTime": False}, icon_attrs = {'class': 'glyphicon glyphicon-date'},
+                                           div_attrs = {'class': 'input-group date'}),
+            'phone3': PhoneTextInput,
         }
     class Media:
         css = {
@@ -76,5 +82,5 @@ class Order(ModelForm):
 
 
 class CallBack2(forms.Form):
-    name = forms.CharField(label='Ваше Имя', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ваше имя'}), max_length=100, required=False)
-    phone = forms.CharField(label='Телефон', widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Введите номер телефона'}), max_length=11, required = True)
+    name = forms.CharField(label='Ваше Имя', widget=PaperTextInput, max_length=100, required=False)
+    phone = forms.CharField(label='Телефон', widget=PhoneTextInput, max_length=13, required = True)
