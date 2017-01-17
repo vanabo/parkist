@@ -59,13 +59,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'geoposition',
-    'materialdjango',
     'smsaero',
-    'main',
-    'bootstrap3_datetime',
+    'main'
 ]
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
+
+PREPEND_WWW = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

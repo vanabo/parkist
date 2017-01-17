@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-{% load polymerdep %}
 <html>
 <head>
   <meta charset="UTF-8">
@@ -9,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="shortcut icon" href="{% static 'main/css/img/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+<<<<<<< HEAD
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
@@ -19,6 +19,9 @@
     {{ "iron-input/iron-input.html" |dep}}
     {{ form.media }}
     <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
+=======
+  <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
+>>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
 </head>
 
 <body>
@@ -34,22 +37,21 @@
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
-<div class="site-wrap">
 <div class="header">
     <div class="block-header-wrap">
     <div class="block-logo col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-5 col-xs-offset-1">
-    <a href="/"><img class="img-responsive" src="{% static 'main/css/img/logo.png' %}" align="center" /></a>
+    <a href="/"><img class="img-responsive" src="{% static 'main/css/img/logo.png' %}" width="100px" align="center" /></a>
     </div>
-    <div class="block-contact col-md-4 col-sm-4 col-xs-7">
+    <div class="block-contact col-md-4 col-sm-4 col-xs-9">
         <div class="phone">
         +7(495)506-76-18
         </div>
         <div class="call-back"><a href="#myModal" data-toggle="modal" >Обратный звонок</a></div>
     </div>
     </div>
-</div>
+ </div>
 
-<div class="wrapper">
+<div class="site-wrap">
 
      <a name="home"></a>
     <div class="block-slide">
@@ -104,10 +106,15 @@
     {{ form.current_time.errors }}
      </div>
       {% endif %}
+<<<<<<< HEAD
       <div class="date-time">
     {{ form.current_time }}
     {{ form.current_date }}
       </div>
+=======
+    {{ form.current_date }}
+    {{ form.current_time }}
+>>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
   </div>
     <div class="form-group">
     <label for="form.phone3.id_for_label">Телефон*</label>
@@ -119,9 +126,13 @@
     {{ form.phone3 }}
   </div>
     <div class="form-group block-button block-center"><input type="submit" name="submit3" class="button-orange" value="Вызвать Паркиста" /></div>
+<<<<<<< HEAD
 
 </form>
 
+=======
+</form> 
+>>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
         </div>
     </div>
 </div>
@@ -300,7 +311,7 @@
     <div class="row">
         <a name="contact"></a>
         <div class="block-map col-md-12 col-sm-12 col-xs-12">
-            <div class="block-table col-md-4 col-md-offset-8 col-sm-5 col-sm-offset-6 col-xs-12">
+            <div class="block-table col-md-3 col-md-offset-8 col-sm-5 col-sm-offset-6 col-xs-12">
                 <h3>Зона Живой Парковки</h3>
                 <p>Время работы:<br>
                 <span>8:00 - 20:00</span></p>
@@ -332,7 +343,6 @@
     </div>
     </div>
     </div>
-</div>
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

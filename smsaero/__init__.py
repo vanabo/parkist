@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # coding: UTF-8
+import json
 import time
 import requests
 import hashlib
 import json
-from urllib.parse import urljoin
+#from urllib.parse import urljoin
 from datetime import datetime
+
 
 class SmsAeroError(Exception):
     """ Super class of all SmsAero Errors. """
@@ -42,15 +44,15 @@ class SmsAero(object):
             'password': self.passwd,
             'answer': 'json',
         })
-        url = urljoin(self.url_gate, selector)
+        #url = urljoin(self.url_gate, selector)
 
         try:
             response = self.session.post(url, data=data)
         except requests.RequestException as err:
             raise SmsAeroHTTPError(err)
 
-        #if not response.status_code == 200:
-            #raise SmsAeroHTTPError('response status code is not 200')
+        if not response.status_code == 200:
+            raise SmsAeroHTTPError('response status code is not 200')
 
         #return self._check_response(response.content)
 
