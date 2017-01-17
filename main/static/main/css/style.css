@@ -16,7 +16,6 @@ cursor: pointer;
   width: 100%;
   height: 100%;
   position: fixed;
-  height: 101%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -40,7 +39,7 @@ ul.navigation {
   display: block;
   padding: 20px;
   color: black;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-decoration: none;
 
 }
@@ -168,14 +167,7 @@ padding-bottom:5px;
 
 }
 .call-back a {
-<<<<<<< HEAD
-font-size: 1.2rem;
-color: #333;
-}
-.call-back a:hover {
-=======
 font-size: 0.9rem;
->>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
 color: #333;
 }
 .block-slide {
@@ -210,7 +202,7 @@ margin-top: 30px;
 margin-bottom:30px;
 }
 .button-orange {
-font-size: 1.8rem;
+font-size: 1.4rem;
 color: #fff;
 width: 250px;
 height:auto;
@@ -222,9 +214,6 @@ z-index: 2000;
 }
 .block-button {
 z-index: 2000;
-}
-.help-map {
-font-size: 12px;
 }
 a.button-orange:hover, .button-orange a:hover {
 color: #fff;
@@ -467,7 +456,7 @@ background-size: cover;
 .block-footer {
 padding:15px;
 color:#fff;
-font-size:0.9rem;
+font-size:0.6rem;
 }
 .footer-block1, .footer-block2, .footer-block3 {
 color: #fff;
@@ -475,10 +464,10 @@ margin: 0 auto;
 }
 .footer-block3 {
 padding-top: 22px;
-font-size: 1.8rem;
+font-size: 1.4rem;
 }
 .footer-block3 span {
-font-size: 1.2rem;
+font-size: 1rem;
 }
 .footer-block2 {
 display: flex;
@@ -499,11 +488,7 @@ html {
     font-size: 14px;
 }
 .phone {
-<<<<<<< HEAD
-font-size: 1.8rem;
-=======
 font-size: 1.125rem;
->>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
 }
 .block-contact {
 text-align: right;
@@ -511,13 +496,8 @@ margin-top: -55px;
 padding-right: 20px;
 }
 .button-orange {
-<<<<<<< HEAD
-font-size: 1.8rem;
-padding: 10px 15px 10px 15px;
-=======
 font-size: 1.125rem;
 padding: 10px 20px 10px 20px;
->>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
 }
 .block-features-text, .block-features, .block-features2 {
     padding-top: 20px;
@@ -536,25 +516,6 @@ padding:10px;
 }
 }
 
-<<<<<<< HEAD
-@media (max-width: 540px) {
-.date-time {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group.date {
-    width: 100%;
-    margin-top:10px;
-}
-
-.input-group.time {
-    width: 100%;
-    margin-top:10px;
-}}
-
-=======
->>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
 .modal-body {
 border: none;
 }

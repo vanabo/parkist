@@ -27,19 +27,9 @@ class Order(ModelForm):
         model = Order
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
-<<<<<<< HEAD
-            'current_time': DateTimePicker(options={"format": "HH:mm", "pickSeconds": False,
-                                                    "pickDate": False},
-                                           icon_attrs={'class': 'glyphicon glyphicon-time'},
-                                           div_attrs={'class': 'input-group time'}),
-            'current_date': DateTimePicker(options={"format": "DD-MM-YYYY", "pickTime": False}, icon_attrs = {'class': 'glyphicon glyphicon-date'},
-                                           div_attrs = {'class': 'input-group date'}),
-            'phone3': PhoneTextInput,
-=======
             'current_date': SelectDateWidget(attrs={'class': 'form-control-date'}),
             'current_time': forms.TimeInput(attrs={'class': 'form-control-time', 'size': '8'}),
             'phone3': forms.TextInput(attrs={'class': 'form-control', 'data-format': '+7 (ddd) ddd-dddd', 'type': 'tel', 'placeholder': 'Введите номер телефона'}),
->>>>>>> 3f1d47841fe58c50b34967de369d517f74be9ab0
         }
     class Media:
         css = {
