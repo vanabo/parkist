@@ -29,11 +29,12 @@ class Order(ModelForm):
         model = Order
         fields = ['current_point', 'current_date', 'current_time', 'phone3']
         widgets = {
-            'current_date': DateTimePicker(options={"format": "YYYY-MM-DD", "pickTime": False}, icon_attrs = {'class': 'glyphicon glyphicon-date'},
-                                           div_attrs = {'class': 'input-group date'}),
             'current_time': DateTimePicker(options={"format": "HH:mm", "pickSeconds": False,
-                                                    "pickDate": False}, icon_attrs = {'class': 'glyphicon glyphicon-time'},
-                                           div_attrs = {'class': 'input-group time'}),
+                                                    "pickDate": False},
+                                           icon_attrs={'class': 'glyphicon glyphicon-time'},
+                                           div_attrs={'class': 'input-group time'}),
+            'current_date': DateTimePicker(options={"format": "DD-MM-YYYY", "pickTime": False}, icon_attrs = {'class': 'glyphicon glyphicon-date'},
+                                           div_attrs = {'class': 'input-group date'}),
             'phone3': PhoneTextInput,
         }
     class Media:

@@ -20,7 +20,7 @@ class SmsAeroHTTPError(SmsAeroError):
 class SmsAero(object):
     URL_GATE = 'http://gate.smsaero.ru/'
     SIGNATURE = 'PARKIST'
-    DIGITAL = 1
+    DIGITAL = 0
     TYPE_SEND = 2
 
     def __init__(self, user, passwd, url_gate=URL_GATE, signature=SIGNATURE,
