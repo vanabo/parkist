@@ -11,12 +11,12 @@ class PhoneTextInput(TextInput):
         # paper-input does not work out of the box with the native form
         # element.
         if value is None:
-            html = u"""<gold-phone-input label='Номер телефона' country-code="+7" phone-number-pattern="XXX-XXX-XX-XX" >
+            html = u"""<gold-phone-input label='Номер телефона' country-code="7" phone-number-pattern="XXX-XXX-XX-XX" >
             <label>Номер телефона</label>
             </gold-phone-input>"""
             return format_html(html, name)
         else:
-            html = u"""<gold-phone-input label='Номер телефона' country-code="+7" phone-number-pattern="XXX-XXX-XX-XX" attr-for-value="value">
+            html = u"""<gold-phone-input label='Номер телефона' country-code="7" phone-number-pattern="XXX-XXX-XX-XX" attr-for-value="value">
             <label>Номер телефона</label>
             <input is="iron-input" name="{0}" value="{1}">
             </gold-phone-input>"""

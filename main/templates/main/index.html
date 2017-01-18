@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load polymerdep %}
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Parkist - Живая парковка в Москве</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
+    <script src="{% static 'bootstrap3_datetime/js/moment.min.js' %}"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="shortcut icon" href="{% static 'main/css/img/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+  <script src="{% static 'bootstrap3_datetime/js/bootstrap-datetimepicker.js' %}"></script>
+  <script src="{% static 'bootstrap3_datetime/js/locales/bootstrap-datetimepicker.ru.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'bootstrap3_datetime/css/bootstrap-datetimepicker.css' %}">
     {{ "polymer/polymer.html" |dep}}
-    {{ "paper-button/paper-button.html" |dep}}
-    {{"gold-phone-input/gold-phone-input.html" |dep}}
+    {{ "gold-phone-input/gold-phone-input.html" |dep}}
     {{ "paper-input/paper-input-container.html" |dep}}
-    {{ "iron-input/iron-input.html" |dep}}
     {{ form.media }}
-    <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
+  <meta name="mailru-domain" content="3e71CWd3hLMGIDj5" />
 </head>
 
 <body>
 
-<ul class="navigation">
-	<li class="nav-item"><a href="#home">Главная</a></li>
-	<li class="nav-item"><a href="#how">Как это работает</a></li>
-	<li class="nav-item"><a href="#price">Цены</a></li>
-	<li class="nav-item"><a href="#order">Вызвать Паркиста</a></li>
-    <li class="nav-item"><a href="#callback">Обратный звонок</a></li>
-	<li class="nav-item"><a href="#contact">Контакты</a></li>
-</ul>
+    <ul class="navigation">
+        <li class="nav-item"><a href="#home">Главная</a></li>
+        <li class="nav-item"><a href="#how">Как это работает</a></li>
+        <li class="nav-item"><a href="#price">Цены</a></li>
+        <li class="nav-item"><a href="#order">Вызвать Паркиста</a></li>
+        <li class="nav-item"><a href="#callback">Обратный звонок</a></li>
+        <li class="nav-item"><a href="#contact">Контакты</a></li>
+    </ul>
 
 <input type="checkbox" id="nav-trigger" class="nav-trigger" />
 <label for="nav-trigger"></label>
+
+<div class="site-wrap">
 <div class="header">
     <div class="block-header-wrap">
     <div class="block-logo col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-5 col-xs-offset-1">
@@ -46,8 +51,6 @@
     </div>
     </div>
  </div>
-
-<div class="site-wrap">
 
      <a name="home"></a>
     <div class="block-slide">
@@ -299,7 +302,7 @@
     <div class="row">
         <a name="contact"></a>
         <div class="block-map col-md-12 col-sm-12 col-xs-12">
-            <div class="block-table col-md-3 col-md-offset-8 col-sm-5 col-sm-offset-6 col-xs-12">
+            <div class="block-table col-md-4 col-md-offset-8 col-sm-5 col-sm-offset-6 col-xs-12">
                 <h3>Зона Живой Парковки</h3>
                 <p>Время работы:<br>
                 <span>8:00 - 20:00</span></p>

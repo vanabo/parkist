@@ -35,7 +35,7 @@ THE SOFTWARE.
         if (!jQuery) {
             throw 'bootstrap-datetimepicker requires jQuery to be loaded first';
         } else if (!moment) {
-            throw 'bootstrap-datetimepicker requires moment.js to be loaded first';
+            throw 'bootstrap-datetimepicker requires moment.min.js to be loaded first';
         } else {
             factory(jQuery, moment);
         }
