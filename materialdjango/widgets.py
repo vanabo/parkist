@@ -3,7 +3,6 @@ from django.utils.html import format_html
 
 # ref https://github.com/django/django/blob/stable/1.8.x/django/forms/widgets.py
 
-
 class PhoneTextInput(TextInput):
 
     def render(self, name, value, attrs=None):
