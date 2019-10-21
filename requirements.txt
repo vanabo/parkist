@@ -5,5 +5,5 @@ gunicorn==19.6.0
 MaterialDjango==0.2.3
 pytz==2016.10
 requests==2.12.4
-urllib3==1.19.1
+urllib3==1.24.2
 whitenoise==3.2.3
